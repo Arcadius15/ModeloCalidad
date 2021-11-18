@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Clases\" />
-    <Folder Include="Controlador\" />
   </ItemGroup>
 
   <ItemGroup>
