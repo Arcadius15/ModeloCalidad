@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrototipoModeloPlataforma.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,10 @@ namespace PrototipoModeloPlataforma
             InitializeComponent();
         }
 
+        private async void Form1_Load(object sender, EventArgs e)
+        {
+            var cn = new Conexion();
+            await cn.Create();
+        }
     }
 }
