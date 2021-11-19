@@ -14,6 +14,10 @@ namespace PrototipoModeloPlataforma.Modelos
         [Required]
         public string nombre { get; set; }
         [Required]
+        public string carrera { get; set; }
+        [Required]
         public int creditos { get; set; }
+        [Required]
+        public DateTime horario { get; set; }
     }
 }
