@@ -1,4 +1,6 @@
 ﻿using PrototipoModeloPlataforma.Controlador;
+using PrototipoModeloPlataforma.Modelos;
+using PrototipoModeloPlataforma.Vistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,17 +13,62 @@ using System.Windows.Forms;
 
 namespace PrototipoModeloPlataforma
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
+
+        private readonly Contexto _context = new Contexto();
 
         private async void Form1_Load(object sender, EventArgs e)
         {
             var cn = new Conexion();
             await cn.Create();
+        }
+
+        private void acceder_Click(object sender, EventArgs e)
+        {
+            Usuario user = _context.Usuarios.Where(x=>x.usuario == usuario.Text && x.contraseña == contraseña.Text).FirstOrDefault();
+            if (user != null)
+            {
+                MenuPrincipal menu = new MenuPrincipal();
+                menu.Show();
+            }
+        }
+
+        private void cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+            _context.Usuarios.Add(new Usuario()
+            {
+                usuario = "jarias",
+                contraseña = "jarias",
+                nombre = "johnny",
+                apellido = "arias",
+                dni = "12345678",
+                edad = 22,
+                nacimiento = new DateTime(1999,12,15),
+                tipo = 2
+            });
+            _context.Cursos.Add(new Curso()
+            {
+                nombre = "Aplicaciones Moviles",
+                carrera = "Desarrollo de Sistemas",
+                creditos = 5,
+                horario = new DateTime(2021, 12, 12, 12, 12, 12)
+            }) ;
+            _context.Aulas.Add(new Aula()
+            {
+                aforo = 30
+            });
+            _context.SaveChanges();
         }
     }
 }

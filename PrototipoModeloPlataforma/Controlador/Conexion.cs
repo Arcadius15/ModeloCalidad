@@ -13,6 +13,7 @@ namespace PrototipoModeloPlataforma.Controlador
         {
             using (var db = new Contexto())
             {
+                await db.Database.EnsureDeletedAsync();
                 await db.Database.EnsureCreatedAsync();
             }
         }
