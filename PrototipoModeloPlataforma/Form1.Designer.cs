@@ -70,6 +70,7 @@ namespace PrototipoModeloPlataforma
             // 
             this.contraseña.Location = new System.Drawing.Point(113, 116);
             this.contraseña.Name = "contraseña";
+            this.contraseña.PasswordChar = '*';
             this.contraseña.Size = new System.Drawing.Size(100, 23);
             this.contraseña.TabIndex = 3;
             // 

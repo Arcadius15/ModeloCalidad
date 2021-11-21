@@ -7,19 +7,15 @@ using System.Threading.Tasks;
 
 namespace PrototipoModeloPlataforma.Modelos
 {
-    public class Curso
+    public class Ticket
     {
         [Key]
         public int id { get; set; }
         [Required]
-        public string nombre { get; set; }
+        public string tipo { get; set; }
         [Required]
-        public string carrera { get; set; }
+        public string descripcion { get; set; }
         [Required]
-        public int creditos { get; set; }
-        [Required]
-        public DateTime horario { get; set; }
-
-
+        public int idregistro { get; set; }
     }
 }

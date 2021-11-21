@@ -52,12 +52,13 @@ namespace PrototipoModeloPlataforma.Vistas
             this.SAEbtn.TabIndex = 0;
             this.SAEbtn.Text = "SAE";
             this.SAEbtn.UseVisualStyleBackColor = true;
+            this.SAEbtn.Click += new System.EventHandler(this.SAEbtn_Click);
             // 
             // asistencias
             // 
             this.asistencias.Location = new System.Drawing.Point(12, 322);
             this.asistencias.Name = "asistencias";
-            this.asistencias.Size = new System.Drawing.Size(171, 67);
+            this.asistencias.Size = new System.Drawing.Size(195, 67);
             this.asistencias.TabIndex = 1;
             this.asistencias.Text = "Ver Asistencias";
             this.asistencias.UseVisualStyleBackColor = true;
@@ -67,9 +68,9 @@ namespace PrototipoModeloPlataforma.Vistas
             // 
             this.amigos.FormattingEnabled = true;
             this.amigos.ItemHeight = 15;
-            this.amigos.Location = new System.Drawing.Point(668, 57);
+            this.amigos.Location = new System.Drawing.Point(655, 57);
             this.amigos.Name = "amigos";
-            this.amigos.Size = new System.Drawing.Size(120, 259);
+            this.amigos.Size = new System.Drawing.Size(133, 259);
             this.amigos.TabIndex = 2;
             // 
             // label1
@@ -87,7 +88,7 @@ namespace PrototipoModeloPlataforma.Vistas
             this.cursos.Location = new System.Drawing.Point(12, 57);
             this.cursos.Name = "cursos";
             this.cursos.RowTemplate.Height = 25;
-            this.cursos.Size = new System.Drawing.Size(171, 259);
+            this.cursos.Size = new System.Drawing.Size(195, 259);
             this.cursos.TabIndex = 4;
             // 
             // pictureBox1
@@ -143,9 +144,9 @@ namespace PrototipoModeloPlataforma.Vistas
             // 
             // grupo
             // 
-            this.grupo.Location = new System.Drawing.Point(668, 322);
+            this.grupo.Location = new System.Drawing.Point(655, 322);
             this.grupo.Name = "grupo";
-            this.grupo.Size = new System.Drawing.Size(120, 32);
+            this.grupo.Size = new System.Drawing.Size(133, 32);
             this.grupo.TabIndex = 0;
             this.grupo.Text = "Formar Grupo";
             this.grupo.UseVisualStyleBackColor = true;
@@ -170,6 +171,7 @@ namespace PrototipoModeloPlataforma.Vistas
             this.Controls.Add(this.SAEbtn);
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

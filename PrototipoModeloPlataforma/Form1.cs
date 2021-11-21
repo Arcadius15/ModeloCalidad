@@ -57,10 +57,44 @@ namespace PrototipoModeloPlataforma
                 nacimiento = new DateTime(1999,12,15),
                 tipo = 2
             });
+            _context.Usuarios.Add(new Usuario()
+            {
+                usuario = "dvicente",
+                contraseña = "dvicente",
+                nombre = "diego",
+                apellido = "vicente",
+                dni = "12345678",
+                edad = 22,
+                nacimiento = new DateTime(1999, 12, 15),
+                tipo = 2
+            });
+            _context.Usuarios.Add(new Usuario()
+            {
+                usuario = "asotil",
+                contraseña = "asotil",
+                nombre = "andra",
+                apellido = "sotil",
+                dni = "12345678",
+                edad = 22,
+                nacimiento = new DateTime(1999, 12, 15),
+                tipo = 2
+            });
+            _context.Usuarios.Add(new Usuario()
+            {
+                usuario = "dtamara",
+                contraseña = "dtamara",
+                nombre = "dany",
+                apellido = "tamara",
+                dni = "12345678",
+                edad = 22,
+                nacimiento = new DateTime(1999, 12, 15),
+                tipo = 2
+            });
+
             _context.Cursos.Add(new Curso()
             {
                 nombre = "Aplicaciones Moviles",
-                carrera = "Desarrollo de Sistemas",
+                carrera = "DSI",
                 creditos = 5,
                 horario = new DateTime(2021, 12, 12, 12, 12, 12)
             }) ;
@@ -68,6 +102,16 @@ namespace PrototipoModeloPlataforma
             {
                 aforo = 30
             });
+
+            _context.Cursos.Add(new Curso()
+            { nombre = "Desarrollo de Servicios Web", carrera = "DSI", creditos = 7, horario = new DateTime(2021, 12, 10, 15, 20, 0) }
+            );
+            _context.Cursos.Add(new Curso()
+            { nombre = "Modelos de calidad de Software", carrera = "DSI", creditos = 8, horario = new DateTime(2021, 12, 10, 15, 20, 0) }
+            );
+            _context.Cursos.Add(new Curso()
+            { nombre = "Ing. de Procesos", carrera = "DSI", creditos = 5, horario = new DateTime(2021, 12, 10, 15, 20, 0) }
+            );
             _context.SaveChanges();
         }
     }
