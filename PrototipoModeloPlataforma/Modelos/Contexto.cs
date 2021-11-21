@@ -13,6 +13,7 @@ namespace PrototipoModeloPlataforma.Modelos
         public DbSet<Aula> Aulas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Curso> Cursos { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -29,10 +30,12 @@ namespace PrototipoModeloPlataforma.Modelos
         {
             modelBuilder.Entity<Aula>().ToTable("Aulas");
             modelBuilder.Entity<Aula>(entity => { entity.HasKey(e => new { e.id}); });
-            modelBuilder.Entity<Usuario>().ToTable("Usuario");
+            modelBuilder.Entity<Usuario>().ToTable("Usuarios");
             modelBuilder.Entity<Usuario>(entity => { entity.HasKey(e => new { e.id }); });
-            modelBuilder.Entity<Curso>().ToTable("Curso");
+            modelBuilder.Entity<Curso>().ToTable("Cursos");
             modelBuilder.Entity<Curso>(entity => { entity.HasKey(e => new { e.id }); });
+            modelBuilder.Entity<Ticket>().ToTable("Tickets");
+            modelBuilder.Entity<Ticket>(entity => { entity.HasKey(e => new { e.id }); });
         }
 
     }
