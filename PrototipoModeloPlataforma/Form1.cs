@@ -96,7 +96,7 @@ namespace PrototipoModeloPlataforma
                 nombre = "Aplicaciones Moviles",
                 carrera = "DSI",
                 creditos = 5,
-                horario = new DateTime(2021, 12, 12, 12, 12, 12)
+                horario = new DateTime(2021, 11, 21, 12, 12, 12)
             }) ;
             _context.Aulas.Add(new Aula()
             {
@@ -104,13 +104,13 @@ namespace PrototipoModeloPlataforma
             });
 
             _context.Cursos.Add(new Curso()
-            { nombre = "Desarrollo de Servicios Web", carrera = "DSI", creditos = 7, horario = new DateTime(2021, 12, 10, 15, 20, 0) }
+            { nombre = "Desarrollo de Servicios Web", carrera = "DSI", creditos = 7, horario = new DateTime(2021, 11, 22, 15, 20, 0) }
             );
             _context.Cursos.Add(new Curso()
-            { nombre = "Modelos de calidad de Software", carrera = "DSI", creditos = 8, horario = new DateTime(2021, 12, 10, 15, 20, 0) }
+            { nombre = "Modelos de calidad de Software", carrera = "DSI", creditos = 8, horario = new DateTime(2021, 11, 23, 15, 20, 0) }
             );
             _context.Cursos.Add(new Curso()
-            { nombre = "Ing. de Procesos", carrera = "DSI", creditos = 5, horario = new DateTime(2021, 12, 10, 15, 20, 0) }
+            { nombre = "Ing. de Procesos", carrera = "DSI", creditos = 5, horario = new DateTime(2021, 12, 24,12, 20, 0) }
             );
             _context.SaveChanges();
         }
